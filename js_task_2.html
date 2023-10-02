@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <center>
+      <h2>Alphabetical Order</h2>
+      <input
+        type="text"
+        id="typeInput"
+        style="height: 20px; width: 100px"
+      /><br /><br />
+      <button style="height: 35px; width: 65px" onclick="press()">
+        Change
+      </button>
+      <h2 id="answer"></h2>
+    </center>
+
+    <script>
+      function press() {
+        let a = document.getElementById("typeInput").value;
+        function sortString(a) {
+          //   var arr = a.split('');
+          //   var sorted = arr.sort();
+          //   return sorted.join('');
+          return a.split("").sort().join("");
+        }
+        document.getElementById("answer").innerHTML = sortString(a);
+      }
+    </script>
+  </body>
+</html>
